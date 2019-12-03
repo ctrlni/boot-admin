@@ -1,0 +1,11 @@
+1. spring admin 监控系统 性能、硬件、日志、线程等
+2.@EnableAdminServer 开启 admin监控
+3.client端 利用 spring.boot.admin.client.url: 注册到监控中
+    management.endpoints.web.exposure.include="*" 代表公开所有这些端点
+    management.endpoint.health.show-details:
+4.没有继承与eureka内使用 spring.boot.admin.client.url=bootadmin地址；接入eureka，bootadmin 自动拉去注册信息监控
+5.开启权限验证需要继承WebSecurityConfigurerAdapter重写
+6.通知
+    邮箱通知 配置邮箱地址，参照email.yml 对应类为MailNotifier
+    自定义类 通过实现Notifier接口的spring bean 添加自己的通知。最好通过 AbstractEventNotifier 和 AbstractStatusChangeNotifier
+

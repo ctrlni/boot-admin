@@ -1,0 +1,22 @@
+spring:
+  mail:
+    host: smtp.qq.com
+    username: 592577678@qq.com
+    password: asiwrybncksnbebc
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+  boot:
+    admin:
+      notify:
+        mail:
+          to: xingjun.guo@medcrab.com
+          from: 592577678@qq.com
+#  management.health.db.enabled=false
+#  management.health.mail.enabled=false
+#  management.health.redis.enabled=false
+#  management.health.mongo.enabled=false
